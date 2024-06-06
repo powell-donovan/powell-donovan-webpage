@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="software to handle complexity" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      powell-donovan: A simple framework for computational engineering
+    </title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html,
+      body {
+        position: relative;
+        margin: 0;
+        overflow: auto;
+
+        font-family: "IBM plex mono";
+        /* height: 100%; */
+      }
+      body {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        grid-template-rows: min-content;
+      }
+      .header {
+        display: grid;
+        grid-template-columns: subgrid;
+        grid-column: 1 / -1;
+
+        padding: 10px;
+      }
+      .header-item {
+        position: relative;
+        cursor: pointer;
+        padding: 0 5px;
+
+        white-space: nowrap;
+        text-decoration: none;
+        color: black;
+      }
+      .header-item:hover {
+        background-color: gainsboro;
+      }
+      .header-item:active {
+        background-color: silver;
+      }
+      .selector {
+        cursor: pointer;
+        color: gray;
+
+        padding: 0 5px;
+      }
+      .selector:hover {
+        color: black;
+        background-color: gainsboro;
+      }
+      .selector:active {
+        color: black;
+        background-color: silver;
+      }
+      .selector::before {
+        content: "□ ";
+      }
+      .selector:hover::before {
+        content: "■ ";
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div style="grid-column: 1 / -7">
+        <span style="font-weight: 500"
+          ><span style="font-weight: 600">▽</span> powell-donovan</span
+        >
+        <span style="color: gray"
+          >A simple framework for computational engineering</span
+        >
+      </div>
+      <div
+        style="
+          grid-column: -7 / -1;
+          display: flex;
+          flex-direction: row;
+          justify-content: end;
+          align-items: start;
+          gap: 10px;
+        "
+      >
+        <a class="header-item" href="#goal">◤ GOAL</a>
+        <a class="header-item" href="#technology">◤ TECHNOLOGY</a>
+        <a class="header-item" href="contact">◤ CONTACT</a>
+      </div>
+    </div>
+    <div
+      style="
+        grid-column: -7 / -1;
+        margin-top: 10vh;
+        margin-bottom: 100px;
+        display: grid;
+        grid-template-columns: repeat(2, min-content);
+        gap: 40px;
+      "
+    >
+      <img src="icon.png" height="120rem" />
+      <div>
+        <div style="font-size: 4rem; font-weight: 500; line-height: 100%">
+          powell-<br />donovan
+        </div>
+        <div style="margin-top: 80px">
+          A SIMPLE FRAMEWORK FOR COMPUTATIONAL ENGINEERING TO BRIDGE THE GAP
+          BETWEEN SOFTWARE AND THE PHYSICAL WORLD.
+        </div>
+        <div style="margin-top: 40px; font-size: 1rem; color: gray">
+          <pre>[ CONTACT   <span class="selector">EMAIL</span><br />            <span class="selector">PHONE</span> ]</pre>
+        </div>
+        <div style="margin-top: 20px; font-size: 1rem; color: gray">
+          <pre>[ PRODUCTS  <span class="selector">SOFTWARE</span><br />            <span class="selector">HARDWARE</span> ]</pre>
+        </div>
+      </div>
+    </div>
+    <div
+      style="
+        display: grid;
+        grid-column: 1 / -1;
+        grid-template-columns: subgrid;
+        margin-top: 100px;
+      "
+    >
+      <div style="grid-column: 2 / -1" id="goal">[ GOAL ]</div>
+    </div>
+    <div
+      style="
+        grid-column: 1 / -1;
+        margin-top: 20px;
+        height: 400px;
+        background-color: lightgray;
+      "
+    ></div>
+    <div
+      style="
+        display: grid;
+        grid-column: 1 / -1;
+        grid-template-columns: subgrid;
+        margin-top: 100px;
+      "
+    >
+      <div style="grid-column: 2 / -1" id="technology">[ TECHNOLOGY ]</div>
+    </div>
+    <div
+      style="
+        display: grid;
+        grid-column: 1 / -1;
+        grid-template-columns: subgrid;
+        margin-top: 100px;
+      "
+    >
+      <div style="grid-column: 2 / -1" id="contact">[ CONTACT ]</div>
+    </div>
+    <div
+      style="
+        display: grid;
+        grid-column: 1 / -1;
+        grid-template-columns: subgrid;
+        margin-top: 100px;
+      "
+    >
+      <div style="grid-column: 2 / -1">[ FOOTER ]</div>
+    </div>
+    <script></script>
+  </body>
+</html>
