@@ -34,40 +34,22 @@
 
         padding: 10px;
       }
-      .header-item {
-        position: relative;
+      .link {
+        display: inline-block;
         cursor: pointer;
-        padding: 0 5px;
+        color: black;
 
-        white-space: nowrap;
+        padding: 2px 5px;
         text-decoration: none;
-        color: black;
       }
-      .header-item:hover {
+      .link:hover {
         background-color: gainsboro;
       }
-      .header-item:active {
+      .link:active {
         background-color: silver;
       }
-      .selector {
-        cursor: pointer;
-        color: gray;
-
-        padding: 0 5px;
-      }
-      .selector:hover {
+      .footer-link {
         color: black;
-        background-color: gainsboro;
-      }
-      .selector:active {
-        color: black;
-        background-color: silver;
-      }
-      .selector::before {
-        content: "□ ";
-      }
-      .selector:hover::before {
-        content: "■ ";
       }
     </style>
   </head>
@@ -80,20 +62,6 @@
         <span style="color: gray"
           >A simple framework for computational engineering</span
         >
-      </div>
-      <div
-        style="
-          grid-column: -7 / -1;
-          display: flex;
-          flex-direction: row;
-          justify-content: end;
-          align-items: start;
-          gap: 10px;
-        "
-      >
-        <a class="header-item" href="#goal">◤ GOAL</a>
-        <a class="header-item" href="#technology">◤ TECHNOLOGY</a>
-        <a class="header-item" href="#contact">◤ CONTACT</a>
       </div>
     </div>
     <div
@@ -112,64 +80,260 @@
           powell-<br />donovan
         </div>
         <div style="margin-top: 80px">
-          A SIMPLE FRAMEWORK FOR COMPUTATIONAL ENGINEERING TO BRIDGE THE GAP
-          BETWEEN SOFTWARE AND THE PHYSICAL WORLD.
+          A SIMPLE FRAMEWORK FOR COMPUTATIONAL ENGINEERING TO LINK THE VIRTUAL
+          WITH THE NATURAL WORLD.
         </div>
-        <div style="margin-top: 40px; font-size: 1rem; color: gray">
-          <pre>[ CONTACT   <span class="selector">EMAIL</span><br />            <span class="selector">PHONE</span> ]</pre>
-        </div>
-        <div style="margin-top: 20px; font-size: 1rem; color: gray">
-          <pre>[ PRODUCTS  <span class="selector">SOFTWARE</span><br />            <span class="selector">HARDWARE</span> ]</pre>
+        <div style="margin-top: 40px">
+          <a class="link" href="#our-mission">◤ OUR MISSION</a><br />
+          <a class="link" href="#open-source">◤ OPEN-SOURCE</a><br />
+          <a class="link" href="#closed-source">◤ CLOSED-SOURCE</a><br />
+          <a class="link" href="#roadmap">◤ ROADMAP</a><br />
+          <a class="link" href="#faq">◤ FAQ</a><br />
         </div>
       </div>
     </div>
+    <!--  -->
+    <!-- HEADLINE -->
+    <!--  -->
     <div
       style="
-        display: grid;
-        grid-column: 1 / -1;
-        grid-template-columns: subgrid;
-        margin-top: 100px;
-      "
-    >
-      <div style="grid-column: 2 / -1" id="goal">[ GOAL ]</div>
-    </div>
-    <div
-      style="
-        grid-column: 1 / -1;
-        margin-top: 20px;
-        height: 400px;
+        grid-column: 2 / 6;
         background-color: lightgray;
-      "
-    ></div>
-    <div
-      style="
-        display: grid;
-        grid-column: 1 / -1;
-        grid-template-columns: subgrid;
         margin-top: 100px;
+        padding-left: 50px;
       "
+      id="our-mission"
     >
-      <div style="grid-column: 2 / -1" id="technology">[ TECHNOLOGY ]</div>
+      [ OUR MISSION ]
     </div>
-    <div
-      style="
-        display: grid;
-        grid-column: 1 / -1;
-        grid-template-columns: subgrid;
-        margin-top: 100px;
-      "
-    >
-      <div style="grid-column: 2 / -1" id="contact">[ CONTACT ]</div>
+    <div style="grid-column: 2 / 6; margin-top: 40px">
+      <p>
+        We build easy-to-use tools for engineers, enabling you to work more
+        efficiently. As engineering projects grow increasingly complex, the
+        existing software stack falls short in adapting to a rapidly changing
+        landscape with numerous diverse domains. Most engineering software is
+        overly specialized and complicated, making it difficult for non-experts
+        to use effectively.
+      </p>
+      <p>
+        We provide software tools that facilitate teamwork and collaboration
+        across various domains and departments. Our tools enable you to
+        integrate engineering knowledge directly into the product, creating an
+        engineering system linked to all relevant data points. This single
+        source of truth forms the foundation of an effective engineering system,
+        allowing seamless collaboration with others. Given the sensitivity of
+        engineering data and intellectual property, our tools are designed with
+        robust data security and safety measures.
+      </p>
+      <p>
+        We view the engineering process as an exciting and dynamic journey, free
+        from tedious and repetitive tasks. Consider the sketch below, which
+        illustrates this process as a series of cycles where each iteration
+        brings new insights and data. These new insights and data are then used
+        to optimize and tweak the model, facilitating further iterations and
+        ultimately leading to the most fitting solution.
+      </p>
+      <div
+        style="border: 1px solid black; padding: 20px; display: inline-block"
+      >
+        <img src="cycle.svg" width="100%" />
+      </div>
+      <div style="color: gray; font-size: 0.8rem; margin-top: 10px">
+        [ Figure 1 ] iterative process in computational engineering
+      </div>
+      <p style="margin-top: 40px">
+        To achieve this ambitious goal, we have decided to
+        <a href="#open-source">open-source</a> most of our software. By doing
+        so, we aim to build trust within our community. However, to provide the
+        most value, some parts will remain
+        <a href="#closed-source">closed-source</a> to allow for custom and
+        privacy-critical solutions for end-users and other companies. If you
+        want to see what the future holds for powell-donovan, take a look at our
+        <a href="#roadmap">roadmap</a>.
+      </p>
     </div>
+    <!--  -->
+    <!-- HEADLINE -->
+    <!--  -->
+    <div
+      style="
+        grid-column: 2 / 6;
+        background-color: lightgray;
+        margin-top: 100px;
+        padding-left: 50px;
+      "
+      id="open-source"
+    >
+      [ OPEN-SOURCE ]
+    </div>
+    <div style="grid-column: 2 / 6; margin-top: 40px">
+      <p>
+        We believe in the value that open-source software brings to all users.
+        Our core modules are open-sourced and hosted on
+        <a href="https://github.com/powell-donovan">GitHub</a>. Powell-Donovan
+        is structured as an open-source development environment (<a
+          href="https://github.com/powell-donovan/dev-environment"
+          >dev-environment</a
+        >) that hosts all the core modules in a single workspace. If you want to
+        contribute to the capabilities of Powell-Donovan, this is the best way
+        to get involved.
+      </p>
+      <p>
+        The dev-environment is structured into individual modules, each
+        representing a different capability. These modules can be compiled into
+        standalone, hostable solutions. Anyone can build these solutions, which
+        can either be locally hosted and accessed via the powell-donovan
+        <span style="text-decoration: underline; color: gray"
+          >web-interface (coming soon)</span
+        >
+        or accessed directly from our provided servers.
+      </p>
+      <p>
+        If you want to host a solution, the best way to get started is by
+        following our guide on
+        <a href="https://github.com/powell-donovan/dev-environment"
+          >How to host a solution</a
+        >.
+      </p>
+    </div>
+    <!--  -->
+    <!-- HEADLINE -->
+    <!--  -->
+    <div
+      style="
+        grid-column: 2 / 6;
+        background-color: lightgray;
+        margin-top: 100px;
+        padding-left: 50px;
+      "
+      id="closed-source"
+    >
+      [ CLOSED-SOURCE ]
+    </div>
+    <div style="grid-column: 2 / 6; margin-top: 40px">
+      <p>
+        In addition to our public open-source solutions, we offer private
+        solutions that are custom-built for end-users or other companies. These
+        private solutions are not open-source, as they contain customer data and
+        intellectual property, which is not available to the public.
+      </p>
+      <p>
+        Except for being closed-source, these private solutions use the same
+        functionality provided by the core modules. Private solutions can also
+        be self-hosted or hosted on our servers, depending on where the compute
+        happens and where the data is stored. Access to any solution is the
+        same, using our
+        <span style="text-decoration: underline; color: gray"
+          >web-interface (coming soon)</span
+        >.
+      </p>
+      <p>
+        Building private solutions also serves as a means to generate sufficient
+        revenue to sustain the continued development of powell-donovan.
+      </p>
+      <p>
+        If you're interested in building a private solution or custom
+        functionality, feel free to reach out to us at
+        <a href="mailto:powell-donovan@outlook.com"
+          >powell-donovan@outlook.com</a
+        >.
+      </p>
+    </div>
+    <!--  -->
+    <!-- HEADLINE -->
+    <!--  -->
+    <div
+      style="
+        grid-column: 2 / 6;
+        background-color: lightgray;
+        margin-top: 100px;
+        padding-left: 50px;
+      "
+      id="roadmap"
+    >
+      [ ROADMAP ]
+    </div>
+    <div style="grid-column: 2 / 6; margin-top: 40px">
+      <p>
+        Given our current early stage of development, this roadmap is subject to
+        regular updates and changes. Nonetheless, here's a rough outline of what
+        to expect in the near future.
+      </p>
+      <pre><p style="font-size: 1rem">
+        ┌─[ 06/2024 ] started
+        │
+        ├─[ <span style="font-weight: 600">today</span> ]
+        │
+        └─<span style="color: gray">[ to be dated ]</span></p></pre>
+    </div>
+    <!--  -->
+    <!-- FAQ -->
+    <!--  -->
+    <div
+      style="
+        grid-column: 2 / 6;
+        background-color: lightgray;
+        margin-top: 100px;
+        padding-left: 50px;
+      "
+      id="faq"
+    >
+      [ FREQUENTLY ASKED QUESTIONS ]
+    </div>
+    <div style="grid-column: 2 / 6; margin-top: 40px">
+      <div>
+        <div style="font-weight: 600">
+          Who are the people whom this software is intended for?
+        </div>
+        <div>
+          This software is intended for working engineers seeking tools to
+          streamline their workflows and reduce inefficiencies encountered with
+          existing software solutions.
+        </div>
+      </div>
+      <br />
+      <div>
+        <div style="font-weight: 600">
+          What are some fields or industries where this software could find
+          practical applications?
+        </div>
+        <div>
+          This software could find practical applications in fields such as
+          mechanical engineering, civil engineering, aerospace engineering,
+          electrical engineering, environmental engineering, biomedical
+          engineering, manufacturing engineering, and materials science, among
+          others. Its versatility enables its use across various industries
+          where computational engineering plays a crucial role in
+          problem-solving and optimization.
+        </div>
+      </div>
+    </div>
+    <!--  -->
+    <!-- FOOTER -->
+    <!--  -->
     <div
       style="
         display: grid;
-        grid-column: 1 / -1;
         grid-template-columns: subgrid;
+        grid-column: 2 / -2;
+        background-color: lightgray;
+        padding: 50px 0;
         margin-top: 100px;
       "
     >
-      <div style="grid-column: 2 / -1">[ FOOTER ]</div>
+      <div style="grid-column: 1 / 3; padding-left: 50px">
+        <a class="footer-link" href="https://github.com/powell-donovan"
+          >GitHub</a
+        >
+      </div>
+      <div style="grid-column: 3 / 5; padding-left: 50px">
+        <a class="footer-link" href="mailto:powell-donovan@outlook.com"
+          >powell-donovan@outlook.com</a
+        >
+      </div>
+      <div style="grid-column: 5 / 7; padding-left: 50px">
+        no rights reserved. do what you want with it.
+      </div>
     </div>
     <script></script>
   </body>
