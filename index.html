@@ -23,7 +23,6 @@
         overflow: auto;
 
         font-family: "IBM plex mono";
-        /* height: 100%; */
       }
       body {
         display: grid;
@@ -36,6 +35,14 @@
         grid-column: 1 / -1;
 
         padding: 10px;
+      }
+      .welcome {
+        grid-column: 2 / -1;
+        margin-top: 10vh;
+        margin-bottom: 100px;
+        display: grid;
+        grid-template-columns: repeat(2, min-content);
+        gap: 40px;
       }
       .link {
         display: inline-block;
@@ -54,11 +61,59 @@
       .footer-link {
         color: black;
       }
+      .welcome-description {
+        margin-top: 80px;
+        grid-column: 2 / 5;
+      }
+      .sub-headline {
+        grid-column: 2 / 6;
+        background-color: lightgray;
+        margin-top: 100px;
+        padding-left: 50px;
+      }
+      .text {
+        grid-column: 2 / 6;
+        margin-top: 40px;
+      }
+      .footer {
+        background-color: lightgray;
+        grid-column: 2 / -2;
+        display: flex;
+        flex-direction: row;
+        padding: 50px 0;
+        margin-top: 100px;
+      }
+      @media only screen and (max-width: 1000px) {
+        .welcome {
+          grid-column: 2 / -1;
+          display: grid;
+          grid-template-columns: min-content;
+          grid-template-rows: repeat(2, min-content);
+          gap: 40px;
+        }
+        .welcome-description {
+          margin-top: 40px;
+          grid-column: 2 / -2;
+        }
+        .sub-headline {
+          grid-column: 2 / -2;
+        }
+        .text {
+          grid-column: 2 / -2;
+          margin-top: 20px;
+        }
+        .footer {
+          grid-column: 1 / -1;
+          flex-direction: column;
+          gap: 40px;
+          padding: 50px 20px;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="header">
-      <div style="grid-column: 1 / -7">
+      <div style="grid-column: 1 / -1">
         <span style="font-weight: 500"
           ><span style="font-weight: 600">▽</span> powell-donovan</span
         >
@@ -67,49 +122,29 @@
         >
       </div>
     </div>
-    <div
-      style="
-        grid-column: -7 / -1;
-        margin-top: 10vh;
-        margin-bottom: 100px;
-        display: grid;
-        grid-template-columns: repeat(2, min-content);
-        gap: 40px;
-      "
-    >
+    <div class="welcome">
       <img src="icon.png" height="120rem" />
-      <div>
-        <div style="font-size: 4rem; font-weight: 500; line-height: 100%">
-          powell-<br />donovan
-        </div>
-        <div style="margin-top: 80px">
-          A SIMPLE FRAMEWORK FOR COMPUTATIONAL ENGINEERING TO LINK THE VIRTUAL
-          WITH THE NATURAL WORLD.
-        </div>
-        <div style="margin-top: 40px">
-          <a class="link" href="#our-mission">◤ OUR MISSION</a><br />
-          <a class="link" href="#open-source">◤ OPEN-SOURCE</a><br />
-          <a class="link" href="#closed-source">◤ CLOSED-SOURCE</a><br />
-          <a class="link" href="#roadmap">◤ ROADMAP</a><br />
-          <a class="link" href="#faq">◤ FAQ</a><br />
-        </div>
+      <div style="font-size: 4rem; font-weight: 500; line-height: 100%">
+        powell-<br />donovan
       </div>
+    </div>
+
+    <div class="welcome-description">
+      A SIMPLE FRAMEWORK FOR COMPUTATIONAL ENGINEERING TO LINK THE VIRTUAL WITH
+      THE NATURAL WORLD.
+    </div>
+    <div style="margin-top: 40px; grid-column: 2 / -1">
+      <a class="link" href="#our-mission">◤ OUR MISSION</a><br />
+      <a class="link" href="#open-source">◤ OPEN-SOURCE</a><br />
+      <a class="link" href="#closed-source">◤ CLOSED-SOURCE</a><br />
+      <a class="link" href="#roadmap">◤ ROADMAP</a><br />
+      <a class="link" href="#faq">◤ FAQ</a><br />
     </div>
     <!--  -->
     <!-- HEADLINE -->
     <!--  -->
-    <div
-      style="
-        grid-column: 2 / 6;
-        background-color: lightgray;
-        margin-top: 100px;
-        padding-left: 50px;
-      "
-      id="our-mission"
-    >
-      [ OUR MISSION ]
-    </div>
-    <div style="grid-column: 2 / 6; margin-top: 40px">
+    <div class="sub-headline" id="our-mission">[ OUR MISSION ]</div>
+    <div class="text">
       <p>
         We build easy-to-use tools for engineers, enabling you to work more
         efficiently. As engineering projects grow increasingly complex, the
@@ -158,18 +193,8 @@
     <!--  -->
     <!-- HEADLINE -->
     <!--  -->
-    <div
-      style="
-        grid-column: 2 / 6;
-        background-color: lightgray;
-        margin-top: 100px;
-        padding-left: 50px;
-      "
-      id="open-source"
-    >
-      [ OPEN-SOURCE ]
-    </div>
-    <div style="grid-column: 2 / 6; margin-top: 40px">
+    <div class="sub-headline" id="open-source">[ OPEN-SOURCE ]</div>
+    <div class="text">
       <p>
         We believe in the value that open-source software brings to all users.
         Our core modules are open-sourced and hosted on
@@ -202,18 +227,8 @@
     <!--  -->
     <!-- HEADLINE -->
     <!--  -->
-    <div
-      style="
-        grid-column: 2 / 6;
-        background-color: lightgray;
-        margin-top: 100px;
-        padding-left: 50px;
-      "
-      id="closed-source"
-    >
-      [ CLOSED-SOURCE ]
-    </div>
-    <div style="grid-column: 2 / 6; margin-top: 40px">
+    <div class="sub-headline" id="closed-source">[ CLOSED-SOURCE ]</div>
+    <div class="text">
       <p>
         In addition to our public open-source solutions, we offer private
         solutions that are custom-built for end-users or other companies. These
@@ -245,18 +260,8 @@
     <!--  -->
     <!-- HEADLINE -->
     <!--  -->
-    <div
-      style="
-        grid-column: 2 / 6;
-        background-color: lightgray;
-        margin-top: 100px;
-        padding-left: 50px;
-      "
-      id="roadmap"
-    >
-      [ ROADMAP ]
-    </div>
-    <div style="grid-column: 2 / 6; margin-top: 40px">
+    <div class="sub-headline" id="roadmap">[ ROADMAP ]</div>
+    <div class="text">
       <p>
         Given our current early stage of development, this roadmap is subject to
         regular updates and changes. Nonetheless, here's a rough outline of what
@@ -272,18 +277,8 @@
     <!--  -->
     <!-- FAQ -->
     <!--  -->
-    <div
-      style="
-        grid-column: 2 / 6;
-        background-color: lightgray;
-        margin-top: 100px;
-        padding-left: 50px;
-      "
-      id="faq"
-    >
-      [ FREQUENTLY ASKED QUESTIONS ]
-    </div>
-    <div style="grid-column: 2 / 6; margin-top: 40px">
+    <div class="sub-headline" id="faq">[ FREQUENTLY ASKED QUESTIONS ]</div>
+    <div class="text">
       <div>
         <div style="font-weight: 600">
           Who are the people whom this software is intended for?
@@ -314,28 +309,22 @@
     <!--  -->
     <!-- FOOTER -->
     <!--  -->
-    <div
-      style="
-        display: grid;
-        grid-template-columns: subgrid;
-        grid-column: 2 / -2;
-        background-color: lightgray;
-        padding: 50px 0;
-        margin-top: 100px;
-      "
-    >
+    <div class="footer">
       <div style="grid-column: 1 / 3; padding-left: 50px">
         <a class="footer-link" href="https://github.com/powell-donovan"
           >GitHub</a
         >
       </div>
       <div style="grid-column: 3 / 5; padding-left: 50px">
-        <a class="footer-link" href="mailto:powell-donovan@outlook.com"
+        <a
+          class="footer-link"
+          href="mailto:powell-donovan@outlook.com"
+          style="white-space: nowrap"
           >powell-donovan@outlook.com</a
         >
       </div>
       <div style="grid-column: 5 / 7; padding-left: 50px">
-        no rights reserved. do what you want with it.
+        no rights reserved. do whatever you want with it.
       </div>
     </div>
     <script></script>
